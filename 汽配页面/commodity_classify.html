@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>商品分类</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script>
+		    document.documentElement.style.fontSize =document.documentElement.clientWidth/750*40 +"px";
+		</script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/commodity_classify.css" />
+	</head>
+
+	<body>
+		<header class="static_header">
+			<div class="header_content">
+				<input type="text" placeholder="搜索您要找的商品"/>
+			</div>
+		</header>
+		<div class="mui-content">
+			<section class="section_body">
+			    <section class="section_left">
+			    	<div class="left_content left_active">商品分类</div>
+			    	<div class="left_content">商品分类</div>
+			    	<div class="left_content">商品分类</div>
+			    	<div class="left_content">商品分类</div>
+			    	<div class="left_content">商品分类</div>
+			    	<div class="left_content">商品分类</div>
+			    	<div class="left_content">商品分类</div>
+			    	<div class="left_content">商品分类</div>
+			    	<div class="left_content">商品分类</div>
+			    	<div class="left_content">商品分类</div>
+			    	<div class="left_content">商品分类</div>
+			    	<div class="left_content">商品分类</div>
+			    	<div class="left_content">商品分类</div>
+			    	<div class="left_content">商品分类</div>
+			    	<div class="left_content">商品分类</div>
+			    	<div class="left_content">商品分类</div>
+			    </section>
+			    <section class="section_right_body">
+				    <section class="section_right">
+				    	<img  src="img/fnelei_banner.png" class="fnelei_banner"/>
+				    	<div class="right_body">
+				    		<a href="second_classification.html">
+					    		<div class="right_content">
+					    			<img src="img/flsp.png"/>
+					    			<span>德国马牌</span>
+					    		</div>
+				    		</a>
+				    		<a href="second_classification.html">
+					    		<div class="right_content">
+					    			<img src="img/flsp.png"/>
+					    			<span>德国马牌</span>
+					    		</div>
+				    		</a>
+				    		<a href="second_classification.html">
+					    		<div class="right_content">
+					    			<img src="img/flsp.png"/>
+					    			<span>德国马牌</span>
+					    		</div>
+				    		</a>
+				    		<a href="second_classification.html">
+					    		<div class="right_content">
+					    			<img src="img/flsp.png"/>
+					    			<span>德国马牌</span>
+					    		</div>
+				    		</a>
+				    		<a href="second_classification.html">
+					    		<div class="right_content">
+					    			<img src="img/flsp.png"/>
+					    			<span>德国马牌</span>
+					    		</div>
+				    		</a>
+				    		<a href="second_classification.html">
+					    		<div class="right_content">
+					    			<img src="img/flsp.png"/>
+					    			<span>德国马牌</span>
+					    		</div>
+				    		</a>
+				    		<a href="second_classification.html">
+					    		<div class="right_content">
+					    			<img src="img/flsp.png"/>
+					    			<span>德国马牌</span>
+					    		</div>
+				    		</a>
+				    </section>
+				    <section class="section_right" style="display: none;">
+				    	<img  src="img/fnelei_banner.png" class="fnelei_banner"/>
+				    	<div class="right_body">
+				    		<a href="second_classification.html">
+					    		<div class="right_content">
+					    			<img src="img/flsp.png"/>
+					    			<span>德国马牌</span>
+					    		</div>
+				    		</a>
+				    </section>
+			    </section>
+			</section>
+		</div>
+		<footer class="footer">
+			<div class="footer_body">
+				<a href="index.html">
+					<div class="footer_div">
+						<img  src="img/shouye.png" class="shouye"/>
+						<span >首页</span>
+					</div>
+				</a>
+				<a href="commodity_classify.html">
+					<div class="footer_div">
+						<img  src="img/fnelei1.png" class="fenlei"/>
+						<span class="footer_active">分类</span>
+					</div>
+				</a>
+				<a href="release.html">
+					<div class="footer_div1">
+						<img  src="img/fabu.png" class="fabu"/>
+						<span>发布</span>
+					</div>
+				</a>
+				<a href="shopping_cart.html">
+					<div class="footer_div">
+						<img  src="img/gouwuche.png" class="gouwuche"/>
+						<span>购物车</span>
+					</div>
+				</a>
+				<a href="personal.html">
+					<div class="footer_div">
+						<img  src="img/my.png" class="wode"/>
+						<span >我的</span>
+					</div>
+				</a>
+			</div>
+		</footer>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
+		<script type="text/javascript">
+			mui.init()
+			$(".left_content").on('tap',function(){
+				//通过 .index()方法获取元素下标，从0开始，赋值给某个变量
+		        var _index = $(this).index();
+			    //让内容框的第 _index 个显示出来，其他的被隐藏
+		        $(".section_right_body .section_right").eq(_index).show().siblings().hide();
+				$(this).addClass('left_active').siblings().removeClass('left_active');
+				
+			})
+		</script>
+	</body>
+
+</html>

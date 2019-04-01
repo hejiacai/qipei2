@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>登录</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script>
+		    document.documentElement.style.fontSize =document.documentElement.clientWidth/750*40 +"px";
+		</script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/login_one.css" />
+	</head>
+
+	<body>
+		<section class="login_body">
+			<p class="login_title">登录</p>
+			<div class="login_content">
+				<input type="number" oninput="if(value.length>11)value=value.slice(0,11)" placeholder="请输入您的手机号码"/>
+				<input type="password" placeholder="请输入您的密码"/>
+				<div class="login_other">
+					<div class="othert_left">
+						<img src="img/guoxuan.png"/>
+						<span>记住密码</span>
+					</div>
+					<a href="forget_pwd.html">
+						<div class="other_right">忘记密码</div>
+					</a>
+				</div>
+			</div>
+			<div class="div_button">
+				<button type="button">登录</button>
+			</div>
+		</section>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</body>
+
+</html>

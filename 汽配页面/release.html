@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>我要发布</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script>
+		    document.documentElement.style.fontSize =document.documentElement.clientWidth/750*40 +"px";
+		</script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/release.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-icon mui-icon-left-nav mui-pull-left" href="index.html"></a>
+		    <h1 class="mui-title">我要发布</h1>
+		</header>
+		<div class="mui-content">
+		    <div class="release_body">
+		    	<div class="release_content">
+		    		<span>请输入标题</span>
+		    		<input type="text" placeholder="请输入"/>
+		    	</div>
+		    	<div class="release_content">
+		    		<span>服务时间</span>
+		    		<input type="text" placeholder="请输时间"/>
+		    	</div>
+		    	<div class="release_content">
+		    		<span>留言</span>
+		    		<input type="text" placeholder="请输留言"/>
+		    	</div>
+		    	<div class="recharge_content1">
+		    		<p>上传图片</p>
+		    		<div class="content1_upload">
+		    			<div class="upload_div">
+		    				<img src="img/img_upload.png" />
+		    				<input type="file" accept="image/*"/>
+		    			</div>
+		    		</div>
+		    	</div>
+		    	<div class="recharge_content2">
+		    		<p>请输入问题描述</p>
+		    		<textarea placeholder="问题描述"></textarea>
+		    	</div>
+		    </div>
+		    <div class="div_button">
+		    	<a href="release_info.html">
+		    		<button type="button">立即发布</button>
+		    	</a>
+		    </div>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</body>
+
+</html>

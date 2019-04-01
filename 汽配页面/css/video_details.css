@@ -1,0 +1,21 @@
+.fenxiang{
+	width:0.875rem ;
+	height: 0.875rem;
+}
+.video_content{
+	width: 100%;
+	height: 12.05rem;
+	padding-left: 0.75rem;
+	padding-right: 0.75rem;
+	margin-top: 0.5rem;
+}
+.video_content img{
+	width: 100%;
+	height: 8.875rem;
+	border-radius: 5px;
+}
+.video_content p{
+	font-size: 0.75rem;
+	text-align: left;
+	margin-top: 0.3rem;
+}

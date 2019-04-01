@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>系统消息</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script>
+		    document.documentElement.style.fontSize =document.documentElement.clientWidth/750*40 +"px";
+		</script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/my_info.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		    <h1 class="mui-title">系统消息</h1>
+		</header>
+		<div class="mui-content">
+			<div class="info_body" >
+				<ul id="OA_task_1" class="mui-table-view">
+					<li class="mui-table-view-cell">
+						<div class="mui-slider-right mui-disabled">
+							<a class="mui-btn mui-btn-red">删除</a>
+						</div>
+						<div class="mui-slider-handle">
+							<div class="info_left">
+								<img src="img/info_img1.png" class="info_img"/>
+								<img src="img/read_new.png" class="new_img"/>
+							</div>
+							<div class="info_right">
+								<div class="info_title">
+									<span>系统信息</span>
+									<span class="info_title_span">10:24</span>
+								</div>
+								<div class="info_content">信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容</div>
+							</div>
+						</div>
+					</li>
+					<li class="mui-table-view-cell">
+						<div class="mui-slider-right mui-disabled">
+							<a class="mui-btn mui-btn-red">删除</a>
+						</div>
+						<div class="mui-slider-handle">
+							<div class="info_left">
+								<img src="img/info_img1.png" class="info_img"/>
+								<img src="img/read_new.png" class="new_img"/>
+							</div>
+							<div class="info_right">
+								<div class="info_title">
+									<span>系统信息</span>
+									<span class="info_title_span">10:24</span>
+								</div>
+								<div class="info_content">信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容信息内容</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		    <div class="info_body1" style="display: none;">
+		    	<div class="info_content1">
+		    		<img src="img/info_img2.png" />
+		    		<span>暂无系统消息哟</span>
+		    	</div>
+		    </div>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
+		<script type="text/javascript">
+			mui.init();
+			(function($){
+				$('#OA_task_1').on('tap', '.mui-btn', function(event) {
+					var elem = this;
+					var li = elem.parentNode.parentNode;
+					mui.confirm('确认删除该条记录？', 'Hello MUI', btnArray, function(e) {
+						if (e.index == 0) {
+							li.parentNode.removeChild(li);
+						} else {
+							setTimeout(function() {
+								$.swipeoutClose(li);
+							}, 0);
+						}
+					});
+				});
+				var btnArray = ['确认', '取消'];
+			})(mui);
+		</script>
+	</body>
+
+</html>

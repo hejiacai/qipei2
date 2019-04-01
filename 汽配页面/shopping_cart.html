@@ -1,0 +1,280 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>购物车</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script>
+		    document.documentElement.style.fontSize =document.documentElement.clientWidth/750*40 +"px";
+		</script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/shopping_cart.css" />
+	</head>
+
+	<body>
+		<header class="shopping_header">
+			<div class="header_content">
+				<div class="header_content_left">
+					<div class="header_content_left_img">
+						<a href="index.html">
+							<img src="img/return2.png" />
+						</a>
+					</div>
+					<div class="header_content_left_div">
+						<span>购物车</span>
+						<p class="font_p">共<span class="len"></span>件商品</p>
+					</div>
+				</div>
+				<div class="header_content_right">管理</div>
+			</div>
+		</header>
+		<section class="shopping_body">
+			<div class="shopping_content" data-guoxuan="0">
+				<img src="img/guoxuan.png" class="guoxuan"/>
+				<img src="img/product_contnet_img.png" class="sp_img"/>
+				<div class="shopping_content_div">
+					<div class="shopping_title">德国马牌CPC2  225/55R17</div>
+					<div class="shopping_tips">出众的干湿地操控，制动性能，豪车配套之选</div>
+					<div class="shopping_content_price">
+						<p class="font_p2">
+			    			<span>￥</span>
+			    			<span class="price">128</span>
+			    		</p>
+				    	<div class="commodity_div_right">
+				    		<div class="div_button reduce">-</div>
+				    		<input type="number" class="number_input" value="1"/>
+				    		<div class="div_button add">+</div>
+					    </div>
+					</div>
+				</div>
+			</div>
+			<div class="shopping_content" data-guoxuan="0">
+				<img src="img/guoxuan.png" class="guoxuan"/>
+				<img src="img/product_contnet_img.png" class="sp_img"/>
+				<div class="shopping_content_div">
+					<div class="shopping_title">德国马牌CPC2  225/55R17</div>
+					<div class="shopping_tips">出众的干湿地操控，制动性能，豪车配套之选</div>
+					<div class="shopping_content_price">
+						<p class="font_p2">
+			    			<span>￥</span>
+			    			<span class="price">200</span>
+			    		</p>
+				    	<div class="commodity_div_right">
+				    		<div class="div_button reduce">-</div>
+				    		<input type="number" class="number_input" value="1"/>
+				    		<div class="div_button add">+</div>
+					    </div>
+					</div>
+				</div>
+			</div>
+			<div class="shopping_content" data-guoxuan="0">
+				<img src="img/guoxuan.png" class="guoxuan"/>
+				<img src="img/product_contnet_img.png" class="sp_img"/>
+				<div class="shopping_content_div">
+					<div class="shopping_title">德国马牌CPC2  225/55R17</div>
+					<div class="shopping_tips">出众的干湿地操控，制动性能，豪车配套之选</div>
+					<div class="shopping_content_price">
+						<p class="font_p2">
+			    			<span>￥</span>
+			    			<span class="price">300</span>
+			    		</p>
+				    	<div class="commodity_div_right">
+				    		<div class="div_button reduce">-</div>
+				    		<input type="number" class="number_input" value="1"/>
+				    		<div class="div_button add">+</div>
+					    </div>
+					</div>
+				</div>
+			</div>
+			<div class="shopping_content" data-guoxuan="0">
+				<img src="img/guoxuan.png" class="guoxuan"/>
+				<img src="img/product_contnet_img.png" class="sp_img"/>
+				<div class="shopping_content_div">
+					<div class="shopping_title">德国马牌CPC2  225/55R17</div>
+					<div class="shopping_tips">出众的干湿地操控，制动性能，豪车配套之选</div>
+					<div class="shopping_content_price">
+						<p class="font_p2">
+			    			<span>￥</span>
+			    			<span class="price">500</span>
+			    		</p>
+				    	<div class="commodity_div_right">
+				    		<div class="div_button reduce">-</div>
+				    		<input type="number" class="number_input" value="1"/>
+				    		<div class="div_button add">+</div>
+					    </div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class="shopping_footer">
+			<div class="shopping_footer_left">
+				<img src="img/guoxuan.png" class="all_guoxuan"/>
+				<span>全选</span>
+			</div>
+			<div class="shopping_footer_right">
+				<div>
+					<span>合计：</span>
+					<span class="font_p2">￥</span>
+					<span class="price1 all_price"></span>
+				</div>
+				<a href="confirm_order.html">
+					<div class="settlement">结算(2)</div>
+				</a>
+			</div>
+		</footer>
+		<footer class="manage_footer">
+			<div class="shopping_footer_left">
+				<img src="img/guoxuan.png" class="all_guoxuan"/>
+				<span>全选</span>
+			</div>
+			<div class="manage_footer_right">
+				<div class="delete">删除</div>
+			</div>
+		</footer>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
+		<script type="text/javascript">
+			mui.init()
+//			结算的总价
+			var all_price=0;
+//			一种商品的总价
+			var prices;
+//			勾选的状态
+			var data_state;
+//			总共有几种商品
+			var len=$(".shopping_body .shopping_content").length;
+//			商品的数量
+			var num;
+//			商品的价格
+			var price;
+			$(function(){
+//				获取商品的件数
+				$(".len").text(len);
+				$('.all_price').text(all_price);
+			})
+			//点击管理时
+			$(".header_content_right").on('tap',function(){
+				if($(".header_content_right").text()=="管理"){
+					$(".shopping_footer").hide();
+					$(".manage_footer").css('display','flex');
+					$(".header_content_right").html("完成");
+				}else if($(".header_content_right").text()=="完成"){
+					$(".shopping_footer").show();
+					$(".manage_footer").hide();
+					$(".header_content_right").html("管理");
+				}
+			})
+//			点击删除时
+			$(".delete").on('tap',function(){
+				var guoxuan_len=$(".guoxuan").length;
+				for(var i=-(guoxuan_len);i<=0;i++){
+					console.info(i)
+					if($(".guoxuan").eq(i).attr('src')=='img/guoxuan1.png'){
+						console.info(i);
+						$(".shopping_content").eq(i).remove();
+					}
+				}
+			})
+//			点击全部选择时
+			$(".all_guoxuan").on('tap',function(){
+				var price_len=$(".price").length;
+				
+				for (var i=0;i<price_len;i++) {
+					if($(".guoxuan").eq(i).attr('src')=='img/guoxuan.png'){
+						$(".guoxuan").eq(i).attr('src','img/guoxuan1.png');
+						price=($(".price").eq(i).html()*1);
+						all_price=all_price+price;
+						$(".shopping_content").eq(i).data("guoxuan","1");
+						$(".all_guoxuan").attr('src','img/guoxuan1.png');
+					}else if($(".guoxuan").eq(i).attr('src')=='img/guoxuan1.png'){
+						$(".guoxuan").eq(i).attr('src','img/guoxuan.png');
+						$(".shopping_content").eq(i).data("guoxuan","0");
+						price=($(".price").eq(i).html()*1);
+						all_price=all_price-price;
+						$(".all_guoxuan").attr('src','img/guoxuan.png');
+					}
+				}
+				$('.all_price').text(all_price);
+				
+			})
+//			点击勾选时
+			$(".guoxuan").on('tap',function(){
+				var price1=($(this).siblings(".shopping_content_div").children(".shopping_content_price").children(".font_p2").children(".price").html()*1);
+				if($(this).attr('src')=='img/guoxuan.png'){
+					$(this).attr('src','img/guoxuan1.png');
+					all_price=price1+all_price;
+					$('.all_price').text(all_price);
+					$(this).parent(".shopping_content").data("guoxuan","1");
+					
+				}else if($(this).attr('src')=='img/guoxuan1.png'){
+					var price1=($(this).siblings(".shopping_content_div").children(".shopping_content_price").children(".font_p2").children(".price").html()*1);
+					$(this).attr('src','img/guoxuan.png');
+					all_price=all_price-price1;
+					$('.all_price').text(all_price);
+					$(this).parent(".shopping_content").data("guoxuan","0");
+				}
+				
+			})
+//			加减
+			$(".reduce").on("tap",function(){
+				price=$(this).parents(".commodity_div_right").siblings(".font_p2").children(".price").html();
+				num=($(this).siblings(".number_input").val()*1);
+//				计算单价
+				price=price/num;
+				num=num-1;
+				if(num<=0){
+					num =1;
+					$(this).siblings(".number_input").val(num);
+				}
+				$(this).siblings(".number_input").val(num);
+				var price1=price*num;
+				$(this).parents(".commodity_div_right").siblings(".font_p2").children(".price").text(price1);
+				data_state=$(this).parents(".shopping_content").data("guoxuan");
+				console.info(data_state);
+				if(data_state==1){
+					all_price=all_price*1-price*1;
+					$('.all_price').text(all_price);
+				}
+			})
+			$(".add").on("tap",function(){
+				price=$(this).parents(".commodity_div_right").siblings(".font_p2").children(".price").html();
+				num=($(this).siblings(".number_input").val()*1);
+//				计算单价
+				price=price/num;
+				num=num+1;
+				$(this).siblings(".number_input").val(num);
+				var price1=price*num;
+				$(this).parents(".commodity_div_right").siblings(".font_p2").children(".price").text(price1);
+				data_state=$(this).parents(".shopping_content").data("guoxuan");
+				console.info(data_state);
+				if(data_state==1){
+					all_price=all_price*1+price*1;
+					$('.all_price').text(all_price);
+				}
+			})
+//			获取焦点时过去单价
+			$(".number_input").focus(function(){
+				price=$(this).parents(".commodity_div_right").siblings(".font_p2").children(".price").html();
+				prices=price;
+				num=($(this).val()*1);
+				price=price/num;
+				
+			})
+//			当商品数量发生改变时
+			$(".number_input").on("input",function(){
+				num=($(this).val()*1);
+				var price1=price*num;
+				$(this).parents(".commodity_div_right").siblings(".font_p2").children(".price").text(price1);
+				data_state=$(this).parents(".shopping_content").data("guoxuan");
+				if(data_state==1){
+					all_price=all_price-prices;
+					all_price=all_price*1+price1*1;
+					$('.all_price').text(all_price);
+				}
+			})
+		</script>
+	</body>
+
+</html>

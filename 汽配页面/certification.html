@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>实名认证</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script>
+		    document.documentElement.style.fontSize =document.documentElement.clientWidth/750*40 +"px";
+		</script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/certification.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class=" mui-icon mui-icon-left-nav mui-pull-left" href="personal.html"></a>
+		    <h1 class="mui-title">实名认证</h1>
+		</header>
+		<div class="mui-content">
+		    <div class="rz_tips">
+		    	<div class="rz_jiantou">
+			    	<img  src="img/rz_jiantou.png"/>
+		    	</div>
+		    	<span>身份证信息</span>
+		    </div>
+		    <div class="rz_idcard">
+		    	<div class="rz_idcard_div">
+		    		<div class="idcard_div_tips">姓名</div>
+		    		<input  type="text" placeholder="请输入您的真实姓名"/>
+		    	</div>
+		    	<div class="rz_idcard_div">
+		    		<div class="idcard_div_tips">证件号</div>
+		    		<input  type="password" placeholder="请输入证件号码（加密处理）"/>
+		    	</div>
+		    </div>
+		    <div class="rz_tips">
+		    	<div class="rz_jiantou">
+			    	<img  src="img/rz_jiantou.png"/>
+		    	</div>
+		    	<span>上传身份证照片</span>
+		    </div>
+		    <div class="upload_body">
+			    <div class="upload">
+			    	<div class="upload_content">
+			    		<input type="file" accept="image/*" capture="camera"/>
+			    		<img src="img/upload_img.png" />
+			    	</div>
+			    	<span>正面（带身份证信息）</span>
+			    </div>
+			    <div class="upload">
+			    	<div class="upload_content">
+			    		<input type="file" accept="image/*" capture="camera"/>
+			    		<img src="img/upload_img1.png" />
+			    	</div>
+			    	<span>反面（带国徽照片）</span>
+			    </div>
+			    <div class="upload">
+			    	<div class="upload_content">
+			    		<input type="file" accept="image/*" capture="camera"/>
+			    		<img src="img/upload_img2.png" />
+			    	</div>
+			    	<span>手持身份证（手持正面）</span>
+			    </div>
+			    <div class="upload">
+			    	<div class="upload_content">
+			    		<input type="file" accept="image/*" capture="camera"/>
+			    		<img src="img/upload_img3.png" />
+			    	</div>
+			    	<span>施工证明（证明您的技术）</span>
+			    </div>
+		    </div>
+		    <div class="upload_body1">
+		    	<div class="upload">
+			    	<div class="upload_content">
+			    		<input type="file" accept="image/*" capture="camera"/>
+			    		<img src="img/upload_img.png" />
+			    	</div>
+			    	<span>正面（带身份证信息）</span>
+			    </div>
+			    <div class="upload">
+			    	<div class="upload_content">
+			    		<input type="file" accept="image/*" capture="camera"/>
+			    		<img src="img/upload_img1.png" />
+			    	</div>
+			    	<span>反面（带国徽照片）</span>
+			    </div>
+			    <div class="upload">
+			    	<div class="upload_content">
+			    		<input type="file" accept="image/*" capture="camera"/>
+			    		<img src="img/upload_img2.png" />
+			    	</div>
+			    	<span>手持身份证（手持正面）</span>
+			    </div>
+			    <div class="rz_tips">
+			    	<div class="rz_jiantou">
+				    	<img  src="img/rz_jiantou.png"/>
+			    	</div>
+			    	<span>店铺证明（营业执照、店铺租聘照片）</span>
+			    </div>
+			    <div>
+			    	<div class="upload">
+				    	<div class="upload_content">
+				    		<input type="file" accept="image/*" capture="camera"/>
+				    		<img src="img/upload_img3.png" />
+				    	</div>
+				    	<span>相关资料正面</span>
+				    </div>
+				    <div class="upload">
+				    	<div class="upload_content">
+				    		<input type="file" accept="image/*" capture="camera"/>
+				    		<img src="img/upload_img3.png" />
+				    	</div>
+				    	<span>相关资料正面</span>
+				    </div>
+			    </div>
+			    
+		    </div>
+		    <div class="div_button">
+		    	<a href="authentication_success.html">
+		    		<button type="button">完成</button>
+		    	</a>
+		    </div>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
+		<script type="text/javascript">
+			mui.init()
+			$(function(){
+				var a=1;
+				if(a==1){
+					$(".upload_body1").show();
+					$(".upload_body").hide();
+				}else if(a==0){
+					$(".upload_body").show();
+					$(".upload_body1").hide();
+				}
+			})
+		</script>
+	</body>
+
+</html>

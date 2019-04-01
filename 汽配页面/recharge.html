@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>充值</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script>
+		    document.documentElement.style.fontSize =document.documentElement.clientWidth/750*40 +"px";
+		</script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/recharge.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class=" mui-icon mui-icon-left-nav mui-pull-left" href="my_wallet.html"></a>
+		    <h1 class="mui-title">充值</h1>
+		</header>
+		<div class="mui-content">
+		    <div class="recharge_content">
+		    	<div class="content_div">100元</div>
+		    	<div class="content_div">200元</div>
+		    	<div class="content_div">300元</div>
+		    	<div class="content_div">400元</div>
+		    	<div class="content_div">500元</div>
+		    	<div class="content_div">600元</div>
+		    </div>
+	    	<div class="renzheng_input">
+	    		<input type="number" placeholder="请输入其他金额" oninput="if(value.length>5)value=value.slice(0,5)"/>
+	    	</div>
+	    	<div class="xian"></div>
+	    	<div class="fkfs_body">
+	    		<div class="fkfs_title">选择付款方式</div>
+	    		<div class="fkfs_content">
+	    			<div class="content_left">
+	    				<div class="left_img">
+	    					<img src="img/wxzf.png"/>
+	    				</div>
+	    				<span>微信支付</span>
+	    			</div>
+	    			<div class="content_right">
+	    				<img  src="img/guo.png" class="guo"/>
+	    			</div>
+	    		</div>
+	    		<div class="fkfs_content">
+	    			<div class="content_left">
+	    				<div class="left_img">
+	    					<img src="img/zfbzf.png"/>
+	    				</div>
+	    				<span>支付宝</span>
+	    			</div>
+	    			<div class="content_right">
+	    				<img  src="img/guo.png" class="guo"/>
+	    			</div>
+	    		</div>
+	    		<div class="fkfs_content">
+	    			<div class="content_left">
+	    				<div class="left_img">
+	    					<img src="img/yhk.png"/>
+	    				</div>
+	    				<span>银行卡</span>
+	    			</div>
+	    			<div class="content_right">
+	    				<img  src="img/guo.png" class="guo"/>
+	    			</div>
+	    		</div>
+	    		<div class="fkfs_content">
+	    			<div class="content_left">
+	    				<div class="left_img">
+	    					<img src="img/yeb.png"/>
+	    				</div>
+	    				<span>余额宝</span>
+	    			</div>
+	    			<div class="content_right">
+	    				<img  src="img/guo.png" class="guo"/>
+	    			</div>
+	    		</div>
+	    	</div>
+	    	<div class="div_button">
+	    		<button type="button" id="sub">确定</button>
+	    	</div>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
+		<script type="text/javascript">
+			mui.init()
+			$(".fkfs_content").on('tap',function(){
+				$(".fkfs_content").children().children(".guo").hide();
+				$(this).children().children(".guo").show();
+			})
+			$(".content_div").on('tap',function(){
+				$(this).addClass('jr_active').siblings().removeClass('jr_active');
+			})
+			
+			
+		</script>
+	</body>
+
+</html>

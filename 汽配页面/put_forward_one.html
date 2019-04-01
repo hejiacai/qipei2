@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>我的钱包</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script>
+		    document.documentElement.style.fontSize =document.documentElement.clientWidth/750*40 +"px";
+		</script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/put_forward_one.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class=" mui-icon mui-icon-left-nav mui-pull-left" href="my_wallet.html"></a>
+		    <h1 class="mui-title">我的钱包</h1>
+		</header>
+		<div class="mui-content">
+		    <div class="fotward_body">
+		    	<div class="fotward_content">
+		    		<img src="img/fotward_yes.png"/>
+		    		<span class="font_span">提现进度已提交</span>
+		    		<span>预计1-2工作日提现成功</span>
+		    	</div>
+		    	<div class="div_button">
+		    		<a href="index.html">
+		    			<button type="button">返回首页</button>
+		    		</a>
+		    	</div>
+		    </div>
+		    <div class="fotward_body1">
+		    	<div class="fotward_content">
+		    		<img src="img/forward_no.png"/>
+		    		<span class="font_span1">您的提现失败</span>
+		    		<span>失败原因失败原因失败原因失败原因失败原因失败原因</span>
+		    	</div>
+		    	<div class="div_button">
+		    		<a href="index.html">
+		    			<button type="button">返回首页</button>
+		    		</a>
+		    	</div>
+		    </div>
+		</div>
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			var a=0;
+			if(a==0){
+				$(".fotward_body1").hide();
+				$(".fotward_body").show();
+			}else if(a==1){
+				$(".fotward_body").hide();
+				$(".fotward_body1").show();
+			}
+		</script>
+	</body>
+
+</html>

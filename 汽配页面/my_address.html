@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>我的地址</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script>
+		    document.documentElement.style.fontSize =document.documentElement.clientWidth/750*40 +"px";
+		</script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/my_address.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-icon mui-icon-left-nav mui-pull-left" href="set_up.html"></a>
+		    <h1 class="mui-title">我的地址</h1>
+		    <a class="mui-btn mui-btn-blue mui-btn-link mui-pull-right" href="add_address.html">添加新地址</a>
+		</header>
+		<div class="mui-content">
+		    <div class="add_body">
+		    	<div class="add_content">
+		    		<div class="add_title">
+		    			 <span>胡小姐</span>
+		    			 <span class="font_span">1801736888</span>
+		    		</div>
+		    		<div class="add">
+			    		<div class="add_div">
+			    			<div class="muoren">默认</div>
+			    			上海市黄浦区北京东路228号科技京城西楼15F
+			    		</div>
+			    		<a href="edit_address.html"><div class="add_right">编辑</div></a>
+		    		</div>
+		    	</div>
+		    	<div class="add_content">
+		    		<div class="add_title">
+		    			 <span>胡小姐</span>
+		    			 <span class="font_span">1801736888</span>
+		    		</div>
+		    		<div class="add">
+			    		<div class="add_div1">
+			    			上海市黄浦区北京东路228号科技京城西楼15F
+			    		</div>
+			    		<div class="add_right">编辑</div>
+		    		</div>
+		    	</div>
+		    	<div class="add_content">
+		    		<div class="add_title">
+		    			 <span>胡小姐</span>
+		    			 <span class="font_span">1801736888</span>
+		    		</div>
+		    		<div class="add">
+			    		<div class="add_div1">
+			    			上海市黄浦区北京东路228号科技京城西楼15F
+			    		</div>
+			    		<div class="add_right">编辑</div>
+		    		</div>
+		    	</div>
+		    </div>
+		    <div class="add_body1">
+		    	<img  src="img/no_add.png"/>
+		    	<p class="body1_p">你还没有收货地址哟~添加一个吧！</p>
+		    </div>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
+		<script type="text/javascript">
+			mui.init()
+			var a=1;
+			if(a==1){
+				$(".add_body1").hide();
+				$(".add_body").show();
+			}else if(a==0){
+				$(".add_body").hide();
+				$(".add_body1").show();
+			}
+		</script>
+	</body>
+
+</html>

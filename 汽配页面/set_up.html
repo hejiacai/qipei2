@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>设置</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script>
+		    document.documentElement.style.fontSize =document.documentElement.clientWidth/750*40 +"px";
+		</script>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" href="css/set_up.css" />
+		
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a  class=" mui-icon mui-icon-left-nav mui-pull-left" href="personal.html"></a>
+		    <h1 class="mui-title">设置</h1>
+		</header>
+		<div class="mui-content">
+		    <div class="set_body">
+		    	<div class="set_content">
+		    		<img  src="img/touxian1.png"/>
+		    		<div class="content_right">
+		    			<span>修改头像</span>
+		    			<a href="#picture" id="changeT">
+		    				<img  src="img/set_jiantou.png"/>
+		    			</a>
+		    		</div>
+		    	</div>
+		    	<div class="set_content1">
+		    		<span>昵称 </span>
+		    		<div class="content_right">
+		    			<span>DF JH</span>
+		    			<a href="modify_username.html">
+			    			<img  src="img/set_jiantou.png"/>
+		    			</a>
+		    		</div>
+		    	</div>
+		    	<div class="set_content1">
+		    		<span>性别 </span>
+		    		<div class="content_right">
+		    			<div class="choice_box">
+		    				<div class="male on" data-sex="男"><input type="radio" checked="checked"><img src="img/xuanze.png" alt="" class="xuanze">男</div>
+		    				<div class="female" data-sex="女"><input type="radio"><img src="img/weixuan.png" alt="" class="xuanze">女</div>
+		    			</div>
+		    			<img  src="img/set_jiantou.png"/>
+		    		</div>
+		    	</div>
+		    	<div class="set_content1">
+		    		<span>手机号码 </span>
+		    		<div class="content_right">
+		    			<span>15021434551</span>
+		    		</div>
+		    	</div>
+		    	<div class="set_content1">
+		    		<span>出生日期  </span>
+		    		<div class="content_right">
+		    			<span>1986-03-11</span>
+		    			<img  src="img/set_jiantou.png"/>
+		    		</div>
+		    	</div>
+		    	<div class="set_content1">
+		    		<span>实名认证 </span>
+		    		<div class="content_right">
+		    			<span class="font_span">未认证</span>
+		    			<img  src="img/set_jiantou.png"/>
+		    		</div>
+		    	</div>
+		    	<div class="set_content1">
+		    		<span>所在地  </span>
+		    		<a href="my_address.html">
+			    		<div class="content_right">
+			    			<span class="font_span">暂无地址</span>
+			    			<img  src="img/set_jiantou.png"/>
+			    		</div>
+		    		</a>
+		    	</div>
+		    	<div class="set_content1 dianji">
+		    		<span>退出当前账户  </span>
+		    		<div class="content_right">
+		    			<img  src="img/set_jiantou.png"/>
+		    		</div>
+		    	</div>
+		    </div>
+		</div>
+		<!--弹框-->
+		<div class="tips_info">
+			<div class="warning">
+				<p class="warning_title">退出</p>
+				<p class="warning_info">
+					退出登录将无法查看。确认退出吗？
+				</p>
+			</div>
+			<div class="tips_button ">
+				<div class="tips_button_div qx">
+					取消
+				</div>
+				<div class="tips_button_div qd">
+					确定
+				</div>
+			</div>
+		</div>
+		<!--遮罩层-->
+		<div class="backdrop"></div>
+		<div id="picture" class="mui-popover mui-popover-bottom mui-popover-action ">
+		    <!-- 可选择菜单 -->
+		    <ul class="mui-table-view">
+		      <li class="mui-table-view-cell">
+		        <a href="#" style="color: #FD4C2D;"class="input_file">
+		        	拍照
+		        	<input  type="file" accept="image/*" capture="camera" name="file1"class="update1"  onchange="update_img1()" enctype="multipart/form-data">
+		        </a>
+		      </li>
+		      <li class="mui-table-view-cell">
+		        <a href="#" class="input_file">
+		        	从相册选择
+		        	<!--<form enctype="multipart/form-data" id="f1">-->
+		        		<input type="file" accept="image/*" id="update" name="file" onchange="update_img()" enctype="multipart/form-data"/>
+		        	<!--</form>-->
+		        </a>
+		      </li>
+		    </ul>
+		    <!-- 取消菜单 -->
+		    <ul class="mui-table-view">
+		      <li class="mui-table-view-cell">
+		        <a href="#picture">
+		        	取消
+		        </a>
+		      </li>
+		    </ul>
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
+		<script type="text/javascript" src="js/tool.js" ></script>
+		<script type="text/javascript">
+			mui.init()
+			$('.choice_box>div').on('tap',function () {
+		        $(this).addClass('on').siblings().removeClass('on')
+		        $(this).find('input').attr('checked','checked')
+		        $('.sexual').html($(this).attr('data-sex'))
+		        $(this).siblings().find('input').removeAttr('checked')
+		        $(this).find('img').attr('src','img/xuanze.png')
+		        $(this).siblings().find('img').attr('src','img/weixuan.png')
+		    })
+		</script>
+	</body>
+
+</html>
